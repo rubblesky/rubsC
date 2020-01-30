@@ -30,8 +30,8 @@ int int2bit( unsigned char i,char *str){
 
 
 int main(){
-
-   signed char i = -254;
+//测试位移运算符
+   signed char i = -100;
    char istr[20];
    int2bit(i,istr);
    printf("移动前(%d)：%s\n",i,istr);
@@ -42,6 +42,20 @@ int main(){
 
    signed char iR = i>>2;
    int2bit(iR,istr);
-   printf("右移两位(%d)：%s\n",iR,istr);    
+   printf("右移两位(%d)：%s\n",iR,istr);
+
+//位运算的应用，屏蔽某些二进制位
+    signed char i1 = -100;
+   int2bit(i1,istr);
+   printf("处理前(%d)：%s\n",i1,istr);
+
+    signed char i2 = i1 & 017;
+    int2bit(i2,istr);
+
+    printf("屏蔽后7位(%d)：%s\n",i2,istr);
+
+    signed char i3 = i1 & ~017;
+    int2bit(i3,istr);
+    printf("屏蔽后7位(%d)：%s\n",i3,istr);
 
 }
