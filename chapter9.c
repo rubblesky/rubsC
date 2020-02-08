@@ -15,12 +15,5 @@ int main(){
     printf("i = %d\n",i);
     int m[30];
     printf("i = %d\n",i);
-    
-    getchar();
-
-    #define b(w) w*w
-    #define l 1
-    printf("\n%d\n",b(2));
-
 
 }
